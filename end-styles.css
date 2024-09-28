@@ -1,0 +1,180 @@
+/* General body styling */
+body {
+    background-color: #000000; /* Fully dark background */
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    margin: 0;
+}
+
+/* Container for the falling papers */
+#paper-fall {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Disable interaction with falling papers */
+    z-index: 10;
+}
+
+/* Individual paper styling */
+.paper {
+    position: absolute;
+    top: -10vh;
+    width: 30px;
+    height: 30px;
+    background: white;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+/* Animation for the falling papers */
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+/* Gift box styling */
+#gift-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+/* Password input and button */
+#password-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 6;
+}
+
+#password {
+    padding: 10px;
+    font-size: 18px;
+}
+
+#open-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+/* Photo container styling */
+#photo-container {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 2s ease;
+}
+
+#photo-container.show {
+    opacity: 1;
+}
+
+#photo-container img {
+    position: absolute;
+    width: 15%; /* Adjust width for larger image size */
+    height: auto;
+    transform: translateY(100vh) scale(0.9); /* Start below the screen */
+    opacity: 0;
+    transition: all 1s ease; /* Smooth transition */
+}
+
+/* Example positions for each image */
+#photo1 {
+    left: 1%;
+    top: 2%;
+}
+
+#photo2 {
+    right: 1%;
+    top: 2%;
+}
+
+#photo3 {
+    left: 10%;
+    top: 10%;
+}
+
+#photo4 {
+    right: 10%;
+    top: 10%;
+}
+
+#photo5 {
+    left: 25%;
+    top: 25%;
+}
+
+#photo6 {
+    right: 25%;
+    top: 25%;
+}
+
+#photo7 {
+    left: 35%;
+    top: 10%;
+}
+
+#photo8 {
+    right: 35%;
+    top: 15%;
+}
+
+/* Bottom text box */
+.bottom-text-box {
+    position: absolute;
+    bottom: 20px; /* Adjust this value to move the text box higher */
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for the text box */
+    color: white;
+}
+/* Initially hide the text box */
+.bottom-text-box {
+    display: none; /* Hidden by default */
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background */
+    color: white;
+}
+
+/* Fade-out effect */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+/* Show photos after password input */
+.photo-container {
+    display: none; /* Hidden initially */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+}

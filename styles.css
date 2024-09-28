@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, black 50%, darkred 50%);
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 40px; /* Increase margin for more space from the title */
+    animation: fadeIn 2s ease-in-out;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+    width: 500px; /* Increase the width for more distance between buttons */
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    animation: fadeIn 3s ease-in-out;
+    background-color: #2c2c2c; /* Darker button color */
+}
+
+.btn-left {
+    background-color: #333; /* Darker left button color */
+}
+
+.btn-right {
+    background-color: #660000; /* Darker red for right button */
+}
+
+.btn-left:hover {
+    background-color: #2a2a2a; /* Darker hover effect for left */
+}
+
+.btn-right:hover {
+    background-color: #550000; /* Darker hover effect for right */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

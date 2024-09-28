@@ -1,0 +1,84 @@
+/* General styling for the body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* Default font */
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Full screen slide container */
+.slide {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background slider */
+.background-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background-color: black; /* Fallback color */
+}
+
+.slide-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+}
+
+/* Content box */
+.content-box {
+    position: relative;
+    width: 70%; /* Widen the text box */
+    background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+    color: white;
+    padding: 30px; /* Adjusted padding */
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Text style */
+#welcome-text {
+    font-size: 18px; /* Smaller font size */
+    font-family: 'Courier New', Courier, monospace; /* Change font style */
+}
+
+/* Floating button */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.end-button {
+    background-color: #444;
+    color: white;
+    padding: 10px 20px; /* Adjusted padding */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.end-button:hover {
+    background-color: #666;
+}
