@@ -19,7 +19,7 @@ function handlePassword() {
     const passwordContainer = document.getElementById('password-container');
     const photoContainer = document.getElementById('photo-container');
 
-    if (password === "password") { // Replace with your actual password
+    if (password === "mylorda") { // Replace with your actual password
         giftBox.style.opacity = 0;
         passwordContainer.style.opacity = 0;
 
